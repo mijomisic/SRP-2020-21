@@ -33,4 +33,8 @@ module.exports = {
     algorithms: ["HS256"],
     exclude: {path: [{url: "/api/login", methods: ["POST"] }] },
   },
+  
+  bcrypt: {
+    SALT_ROUNDS: process.env.SALT_Rounds || 12,
+  },
 };
